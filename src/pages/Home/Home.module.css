@@ -1,0 +1,11 @@
+.root {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}

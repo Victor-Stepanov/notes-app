@@ -1,0 +1,30 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 140px;
+  padding: 15px;
+
+  color: #fff;
+  word-wrap: break-word;
+
+  background: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgb(255 255 255 / 32.6%);
+  border-radius: 15px;
+  box-shadow: inset -6px -4px 2px rgb(255 255 255 / 3%);
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 23px;
+}
+
+.control {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
