@@ -1,9 +1,12 @@
 import React from 'react';
 
+import styles from './form.module.css';
+
 import { createNote } from '../../store/features/note';
 import { useAppDispatch } from '../../store/store';
+import { Button, Textarea } from '../ui';
 
-export function Form() {
+export function CreateForm() {
   const [text, setText] = React.useState('');
   const dispatch = useAppDispatch();
 
@@ -16,13 +19,13 @@ export function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <Textarea
+        placeholder="Новая заметка..."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button type="submit">Add Note</button>
+      <Button type="submit">Сохранить</Button>
     </form>
   );
 }

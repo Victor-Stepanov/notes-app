@@ -3,10 +3,9 @@
   margin: 0 auto;
 }
 
-.wrapper {
-  width: 100%;
-}
-
 .title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #fff;
   text-align: center;
 }

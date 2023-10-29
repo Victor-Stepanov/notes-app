@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 html,
 body {
   width: 100vw;
   height: 100vh;
+
+  font-family: Pacifico, cursive;
   text-size-adjust: 100%;
   text-rendering: optimizelegibility;
 
+  background: linear-gradient(to right, #1a237e, lightgreen);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #6ac2ff;
 }

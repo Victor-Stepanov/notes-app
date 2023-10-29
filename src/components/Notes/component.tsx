@@ -1,33 +1,23 @@
 import styles from './Notes.module.css';
 
 import { selectNoteModule } from '../../store/features/note/selectors';
-import { useAppDispatch, useAppSelector } from '../../store/store';
-import { editNote, deleteNote } from '../../store/features/note';
+import { useAppSelector } from '../../store/store';
+
+import { CreateForm } from '../CreateForm';
+import { Note } from '../Note/component';
 
 export function Notes() {
   const { notes } = useAppSelector(selectNoteModule);
-  const dispatch = useAppDispatch();
-
-  const handleEdit = (id: string, newText: string) => {
-    dispatch(editNote({ id, text: newText }));
-  };
-
-  const handleDelete = (id: string) => {
-    dispatch(deleteNote(id));
-  };
 
   return (
     <section className={styles.section}>
-      <ul>
+      <ul className={styles.noteList}>
         {notes.map((note) => (
           <li key={note.id}>
-            <input
-              defaultValue={note.text}
-              onBlur={(e) => handleEdit(note.id, e.target.value)}
-            />
-            <button onClick={() => handleDelete(note.id)}>Delete</button>
+            <Note id={note.id} text={note.text} />
           </li>
         ))}
+        <CreateForm />
       </ul>
     </section>
   );

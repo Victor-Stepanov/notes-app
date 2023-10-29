@@ -1,0 +1,19 @@
+.root {
+  resize: none;
+
+  font-family: inherit;
+  font-size: 23px;
+  color: #fff;
+  white-space: pre-wrap;
+
+  background-color: transparent;
+  border: none;
+}
+
+.root:focus {
+  outline: none;
+}
+
+.root::placeholder {
+  color: #fff;
+}

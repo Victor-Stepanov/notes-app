@@ -1,4 +1,26 @@
 .section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.noteList {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-gap: 1rem;
+  transition: grid-template-columns 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+  .noteList {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .noteList {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
 }
